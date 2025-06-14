@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ElectroX Product Showcase</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<!-- Carousel Section -->
+<section class="carousel-section">
+    <h2>Explore the Drona Electronics</h2>
+    <div class="carousel">
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+      <div class="carousel-images">
+        <img src="image/IMG1.jpg" class="carousel-slide active" alt="View 1">
+        <img src="image/IMG2.jpg" class="carousel-slide" alt="View 2">
+        <img src="image/IMG3.jpg" class="carousel-slide" alt="View 3">
+        <img src="image/IMG4.jpg" class="carousel-slide" alt="View 3">
+        <img src="image/IMG5.jpg" class="carousel-slide" alt="View 3">
+        <img src="image/IMG6.jpg" class="carousel-slide" alt="View 3">
+      </div>
+      <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+    </div>
+  </section>  
+  <!-- Image Gallery Section -->
+<section class="gallery-section">
+    <h2>Product Gallery</h2>
+    <div class="gallery-grid">
+      <img src="image/IMG1.jpg" alt="Product View 1" onclick="openLightbox(this)">
+      <img src="image/IMG2.jpg" alt="Product View 2" onclick="openLightbox(this)">
+      <img src="image/IMG3.jpg" alt="Product View 3" onclick="openLightbox(this)">
+      <img src="image/IMG4.jpg" alt="Product View 4" onclick="openLightbox(this)">
+      <img src="image/IMG5.jpg" alt="Product View 4" onclick="openLightbox(this)">
+      <img src="image/IMG6.jpg" alt="Product View 4" onclick="openLightbox(this)">
+      <img src="image/IMG7.jpg" alt="Product View 4" onclick="openLightbox(this)">
+      <img src="image/IMG8.jpg" alt="Product View 4" onclick="openLightbox(this)">
+      <img src="image/IMG9.jpg" alt="Product View 4" onclick="openLightbox(this)">
+      <img src="image/IMG10.jpg" alt="Product View 4" onclick="openLightbox(this)">
+      <img src="image/IMG11.jpg" alt="Product View 4" onclick="openLightbox(this)">
+      <img src="image/IMG12.jpg" alt="Product View 4" onclick="openLightbox(this)">
+    </div>
+  </section>
+  
+  <!-- Lightbox Modal -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Preview">
+  </div>
+  
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Why Choose ElectroX?</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <h3>🔊 Superior Sound</h3>
+        <p>Experience high-fidelity audio with noise cancellation and deep bass.</p>
+      </div>
+      <div class="feature">
+        <h3>🕒 Long Battery</h3>
+        <p>Enjoy up to 20 hours of playback on a single charge.</p>
+      </div>
+      <div class="feature">
+        <h3>🎧 Comfortable Fit</h3>
+        <p>Soft ear cushions designed for all-day use without fatigue.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Drona Electronics. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
