@@ -69,7 +69,7 @@ function submitBuyRequest(event) {
     mobile
   };
 
-  fetch("https://script.google.com/macros/s/AKfycby6APgBEvNEMEc_arv4TICoLiEWZQ9atDteoZZYOM2CkH3igJPTpDSEHv2G1LiB0-lP_A/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbzk0igBPWgyNVlnBLTBE_PNtiX15EgAcZjQUS7rhryQohHSUIvDEPCyzb2zmcgzAi9Zjw/exec", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
