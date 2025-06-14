@@ -30,6 +30,7 @@
       <div class="gallery-item">
         <img src="image/IMG1.jpg" alt="Product 1" onclick="openLightbox(this)">
         <p class="product-name">Lamps With Mantra Sound</p>
+        <button onclick="openBuyForm('Lamps With Mantra Sound')">Buy Now</button>
       </div>
       <div class="gallery-item">
         <img src="image/IMG2.jpg" alt="Product 2" onclick="openLightbox(this)">
@@ -87,9 +88,31 @@
         <img src="image/IMG15.jpg" alt="Product 6" onclick="openLightbox(this)">
         <p class="product-name">Night Lamps</p>
       </div>
+      <div class="gallery-item">
+        <img src="image/IMG1.jpg" alt="Product 16" onclick="openLightbox(this)">
+        <p class="product-name">Lamps With Mantra</p>
+        <button onclick="openBuyForm('Lamps With Mantra')">Buy Now</button>
+      </div>
     </div>
   </section>
-  
+  <!-- Buy Form Modal -->
+<div id="buyFormModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeBuyForm()">&times;</span>
+    <h2>Buy Request</h2>
+    <form id="buyForm" onsubmit="submitBuyRequest(event)">
+      <input type="hidden" id="product" name="product">
+      <label>Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+      <label>Address:</label><br>
+      <textarea id="address" name="address" required></textarea><br>
+      <label>Mobile Number:</label><br>
+      <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}"><br><br>
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+</div>
+
   <!-- Lightbox Modal -->
   <div id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Preview">
