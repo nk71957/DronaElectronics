@@ -45,4 +45,46 @@ function openLightbox(imgElement) {
   function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
   }
-  
+  function openBuyForm(productName) {
+  document.getElementById("buyFormModal").style.display = "flex";
+  document.getElementById("product").value = productName;
+}
+
+function closeBuyForm() {
+  document.getElementById("buyFormModal").style.display = "none";
+}
+
+function submitBuyRequest(event) {
+  event.preventDefault();
+
+  const product = document.getElementById("product").value;
+  const name = document.getElementById("name").value;
+  const address = document.getElementById("address").value;
+  const mobile = document.getElementById("mobile").value;
+
+  const data = {
+    product,
+    name,
+    address,
+    mobile
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbx1eg5oGHsYZFleOAbp0m4KApfNKuuXrrPG20xtwx9hib5kwF5LVrLoXJc4dDjsAQrljA/exechttps://script.google.com/macros/library/d/1CWhN2nkYdmZ0iy39znDVoUicZpRSzZYVOFXrWKU2-v75gJe7rFUJJRx0/1https://script.google.com/macros/s/AKfycbx1eg5oGHsYZFleOAbp0m4KApfNKuuXrrPG20xtwx9hib5kwF5LVrLoXJc4dDjsAQrljA/exec", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(res => res.text())
+  .then(response => {
+    alert("Your request was submitted successfully!");
+    closeBuyForm();
+    document.getElementById("buyForm").reset();
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("Something went wrong. Please try again.");
+  });
+}
+
