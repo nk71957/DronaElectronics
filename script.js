@@ -69,7 +69,7 @@ function submitBuyRequest(event) {
     mobile
   };
 
-  fetch("https://script.google.com/macros/s/AKfycbx1eg5oGHsYZFleOAbp0m4KApfNKuuXrrPG20xtwx9hib5kwF5LVrLoXJc4dDjsAQrljA/exechttps://script.google.com/macros/library/d/1CWhN2nkYdmZ0iy39znDVoUicZpRSzZYVOFXrWKU2-v75gJe7rFUJJRx0/1https://script.google.com/macros/s/AKfycbx1eg5oGHsYZFleOAbp0m4KApfNKuuXrrPG20xtwx9hib5kwF5LVrLoXJc4dDjsAQrljA/exec", {
+  fetch("https://script.google.com/macros/s/AKfycby6APgBEvNEMEc_arv4TICoLiEWZQ9atDteoZZYOM2CkH3igJPTpDSEHv2G1LiB0-lP_A/exec", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
