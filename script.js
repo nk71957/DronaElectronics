@@ -1,17 +1,18 @@
 function buyNow() {
-    alert("Redirecting to checkout...");
-    // window.location.href = "checkout.html";
-  }
-  
-  function learnMore() {
-    alert("Scroll to learn more about the product.");
-    window.scrollTo({
-      top: document.querySelector(".features").offsetTop,
-      behavior: 'smooth'
-    });
-  }
-  
-  let currentSlide = 0;
+  alert("Redirecting to checkout...");
+  // window.location.href = "checkout.html";
+}
+
+function learnMore() {
+  alert("Scroll to learn more about the product.");
+  window.scrollTo({
+    top: document.querySelector(".features").offsetTop,
+    behavior: 'smooth'
+  });
+}
+
+// === Carousel Logic ===
+let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slide');
 
 function showSlide(index) {
@@ -30,24 +31,27 @@ function moveSlide(direction) {
   showSlide(currentSlide);
 }
 
-// Optional: Auto-slide every 5 seconds
+// Auto-slide every 5 seconds
 setInterval(() => {
   moveSlide(1);
 }, 5000);
 
+// === Lightbox ===
 function openLightbox(imgElement) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    lightbox.style.display = "flex";
-    lightboxImg.src = imgElement.src;
-  }
-  
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-  function openBuyForm(productName) {
-  document.getElementById("buyFormModal").style.display = "flex";
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightbox.style.display = "flex";
+  lightboxImg.src = imgElement.src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+// === Buy Form ===
+function openBuyForm(productName) {
   document.getElementById("product").value = productName;
+  document.getElementById("buyFormModal").style.display = "flex";
 }
 
 function closeBuyForm() {
@@ -61,30 +65,32 @@ function submitBuyRequest(event) {
   const name = document.getElementById("name").value;
   const address = document.getElementById("address").value;
   const mobile = document.getElementById("mobile").value;
+  const quantity = document.getElementById("quantity") ? document.getElementById("quantity").value : 1;
 
-  const data = {
-    product,
-    name,
-    address,
-    mobile
-  };
-
-  fetch("https://script.google.com/macros/s/AKfycbzk0igBPWgyNVlnBLTBE_PNtiX15EgAcZjQUS7rhryQohHSUIvDEPCyzb2zmcgzAi9Zjw/exec", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-  .then(res => res.text())
-  .then(response => {
-    alert("Your request was submitted successfully!");
-    closeBuyForm();
-    document.getElementById("buyForm").reset();
-  })
-  .catch(error => {
-    console.error("Error:", error);
-    alert("Something went wrong. Please try again.");
+   // 🕒 Get current date & time
+  const now = new Date();
+  const orderDateTime = now.toLocaleString('en-IN', {
+    day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    hour12: true
   });
-}
 
+   // 📩 Compose WhatsApp message
+  const message = `🛒 *Buy Request - Drona Electronics*%0A` +
+                  `*Product:* ${product}%0A` +
+                  `*Name:* ${name}%0A` +
+                  `*Address:* ${address}%0A` +
+                  `*Quantity:* ${quantity}%0A` +
+                  `*Mobile:* ${mobile}%0A` +
+                  `🗓️ *Order Time:* ${orderDateTime}`;
+
+  const phoneNumber = "918287879066"; // ✅ your WhatsApp number
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+  // Open WhatsApp
+  window.open(whatsappURL, "_blank");
+
+  // Optional: Close form & reset
+  closeBuyForm();
+  document.getElementById("buyForm").reset();
+}
