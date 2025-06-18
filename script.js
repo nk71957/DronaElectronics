@@ -11,7 +11,6 @@ function learnMore() {
   });
 }
 
-// === Carousel Logic ===
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slide');
 
@@ -31,12 +30,10 @@ function moveSlide(direction) {
   showSlide(currentSlide);
 }
 
-// Auto-slide every 5 seconds
 setInterval(() => {
   moveSlide(1);
 }, 5000);
 
-// === Lightbox ===
 function openLightbox(imgElement) {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
@@ -67,7 +64,6 @@ function submitBuyRequest(event) {
   const mobile = document.getElementById("mobile").value;
   const quantity = document.getElementById("quantity") ? document.getElementById("quantity").value : 1;
 
-   // 🕒 Get current date & time
   const now = new Date();
   const orderDateTime = now.toLocaleString('en-IN', {
     day: '2-digit', month: '2-digit', year: 'numeric',
@@ -75,7 +71,6 @@ function submitBuyRequest(event) {
     hour12: true
   });
 
-   // 📩 Compose WhatsApp message
   const message = `🛒 *Buy Request - Drona Electronics*%0A` +
                   `*Product:* ${product}%0A` +
                   `*Name:* ${name}%0A` +
@@ -84,13 +79,11 @@ function submitBuyRequest(event) {
                   `*Mobile:* ${mobile}%0A` +
                   `🗓️ *Order Time:* ${orderDateTime}`;
 
-  const phoneNumber = "917903212288"; // ✅ your WhatsApp number
+  const phoneNumber = "917903212288"; 
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
-  // Open WhatsApp
   window.open(whatsappURL, "_blank");
 
-  // Optional: Close form & reset
   closeBuyForm();
   document.getElementById("buyForm").reset();
 }
@@ -110,7 +103,6 @@ function submitFrameRequest(event) {
   const address = document.getElementById("frameAddress").value;
   const mobile = document.getElementById("frameMobile").value;
 
-  // 🕒 Get current date & time
   const now = new Date();
   const orderDateTime = now.toLocaleString('en-IN', {
     day: '2-digit', month: '2-digit', year: 'numeric',
@@ -118,8 +110,6 @@ function submitFrameRequest(event) {
     hour12: true
   });
 
-
- // 📩 Compose WhatsApp message
   const message = `🖼️ *Frame Customization Request*%0A` +
                   `*Name:* ${name}%0A` +
                   `*Address:* ${address}%0A` +
@@ -161,16 +151,16 @@ function submitBulkOrder(event) {
     hour12: true
   });
 
-  const message = `📦 *Bulk Order Inquiry*%0A` +
+  const message = `📦 *Bulk Order Enquiry*%0A` +
                   `*Name:* ${name}%0A` +
                   `*Business / Shop:* ${business}%0A` +
                   `*Mobile:* ${mobile}%0A` +
                   `*Address:* ${address}%0A` +
                   `*Product:* ${product}%0A` +
                   `*Quantity:* ${quantity}%0A` +
-                  `🕒 *Inquiry Time:* ${orderTime}`;
+                  `🕒 *Enquiry Time:* ${orderTime}`;
 
-  const phoneNumber = "917903212288"; // ✅ your WhatsApp number
+  const phoneNumber = "917903212288"; 
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
   window.open(whatsappURL, "_blank");
