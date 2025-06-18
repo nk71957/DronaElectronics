@@ -125,10 +125,10 @@ function submitFrameRequest(event) {
                   `*Address:* ${address}%0A` +
                   `*Mobile:* ${mobile}%0A` +
                   `🗓️ *Order Time:* ${orderDateTime}%0A` +
-                  `⚠️ *Note:* Please upload audio & photo in HD, and PDF format only.`;
+                  `⚠️ *Note:* Please upload audio and photo in HD, or PDF format only.`;
 
   const phoneNumber = "917903212288";
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
   window.open(whatsappURL, "_blank");
 
