@@ -258,3 +258,359 @@
   font-size: 20px;
   cursor: pointer;
 }
+.button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 50px 20px;
+  background: #f8fafc;
+}
+
+.button-section button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 90%;
+  max-width: 320px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.button-section button:hover {
+  background: #0056b3;
+}
+
+/* Bulk Order Modal Overlay */
+.bulk-order-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Modal Content */
+.bulk-order-content {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  font-family: "Segoe UI", sans-serif;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* Close Button */
+.bulk-order-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+.bulk-order-close:hover {
+  color: red;
+}
+
+/* Heading */
+.bulk-order-title {
+  margin-top: 0;
+  text-align: center;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Labels */
+.bulk-order-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs */
+.bulk-order-input,
+.bulk-order-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.bulk-order-input:focus,
+.bulk-order-textarea:focus {
+  border-color: #007bff;
+}
+
+/* Textarea adjustments */
+.bulk-order-textarea {
+  padding-right: 40px; /* space for Grammarly icons */
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Submit Button */
+.bulk-order-button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.bulk-order-button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Overlay */
+.frame-request-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Modal Content Box */
+.frame-request-content {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Close Button */
+.frame-request-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+.frame-request-close:hover {
+  color: red;
+}
+
+/* Title */
+.frame-request-title {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Label Styling */
+.frame-request-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Input & Textarea */
+.frame-request-input,
+.frame-request-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.frame-request-input:focus,
+.frame-request-textarea:focus {
+  border-color: #28a745;
+}
+
+/* Textarea Specific */
+.frame-request-textarea {
+  padding-right: 40px; /* extra space for Grammarly icons */
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button */
+.frame-request-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.frame-request-button:hover {
+  background-color: #218838;
+}
+
+/* Buy Form Modal Overlay */
+.buy-form-modal {
+  display: none; /* default hidden */
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Modal Box */
+.buy-form-content {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Close Button */
+.buy-form-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+.buy-form-close:hover {
+  color: red;
+}
+
+/* Title */
+.buy-form-title {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Label Styling */
+.buy-form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Input & Textarea Styling */
+.buy-form-input,
+.buy-form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.buy-form-input:focus,
+.buy-form-textarea:focus {
+  border-color: #007bff;
+}
+
+/* Textarea Specific */
+.buy-form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Submit Button */
+.buy-form-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.buy-form-button:hover {
+  background-color: #0056b3;
+}
+
+.buy-now-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.buy-now-button:hover {
+  background-color: #218838;
+  transform: scale(1.03);
+}
+
+.buy-now-button:active {
+  transform: scale(0.98);
+}

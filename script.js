@@ -135,3 +135,46 @@ function submitFrameRequest(event) {
   closeFrameForm();
   document.getElementById("frameForm").reset();
 }
+
+function openBulkOrderForm() {
+  document.getElementById("bulkOrderModal").style.display = "flex";
+}
+
+function closeBulkOrderForm() {
+  document.getElementById("bulkOrderModal").style.display = "none";
+}
+
+function submitBulkOrder(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("bulkName").value;
+  const business = document.getElementById("bulkBusiness").value;
+  const mobile = document.getElementById("bulkMobile").value;
+  const address = document.getElementById("bulkAddress").value;
+  const product = document.getElementById("bulkProduct").value;
+  const quantity = document.getElementById("bulkQuantity").value;
+
+  const now = new Date();
+  const orderTime = now.toLocaleString('en-IN', {
+    day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    hour12: true
+  });
+
+  const message = `📦 *Bulk Order Inquiry*%0A` +
+                  `*Name:* ${name}%0A` +
+                  `*Business / Shop:* ${business}%0A` +
+                  `*Mobile:* ${mobile}%0A` +
+                  `*Address:* ${address}%0A` +
+                  `*Product:* ${product}%0A` +
+                  `*Quantity:* ${quantity}%0A` +
+                  `🕒 *Inquiry Time:* ${orderTime}`;
+
+  const phoneNumber = "917903212288"; // ✅ your WhatsApp number
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+  window.open(whatsappURL, "_blank");
+
+  closeBulkOrderForm();
+  document.getElementById("bulkOrderForm").reset();
+}
