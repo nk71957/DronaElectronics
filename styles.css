@@ -365,7 +365,7 @@
 
 /* Textarea adjustments */
 .bulk-order-textarea {
-  padding-right: 40px; /* space for Grammarly icons */
+  padding-right: 40px; 
   resize: vertical;
   min-height: 80px;
 }
@@ -467,7 +467,7 @@
 
 /* Textarea Specific */
 .frame-request-textarea {
-  padding-right: 40px; /* extra space for Grammarly icons */
+  padding-right: 40px; 
   resize: vertical;
   min-height: 80px;
 }
