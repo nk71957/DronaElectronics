@@ -84,7 +84,7 @@ function submitBuyRequest(event) {
                   `*Mobile:* ${mobile}%0A` +
                   `🗓️ *Order Time:* ${orderDateTime}`;
 
-  const phoneNumber = "918287879066"; // ✅ your WhatsApp number
+  const phoneNumber = "917903212288"; // ✅ your WhatsApp number
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
   // Open WhatsApp
@@ -93,4 +93,45 @@ function submitBuyRequest(event) {
   // Optional: Close form & reset
   closeBuyForm();
   document.getElementById("buyForm").reset();
+}
+
+function openFrameForm() {
+  document.getElementById("frameFormModal").style.display = "flex";
+}
+
+function closeFrameForm() {
+  document.getElementById("frameFormModal").style.display = "none";
+}
+
+function submitFrameRequest(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("frameName").value;
+  const address = document.getElementById("frameAddress").value;
+  const mobile = document.getElementById("frameMobile").value;
+
+  // 🕒 Get current date & time
+  const now = new Date();
+  const orderDateTime = now.toLocaleString('en-IN', {
+    day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    hour12: true
+  });
+
+
+ // 📩 Compose WhatsApp message
+  const message = `🖼️ *Frame Customization Request*%0A` +
+                  `*Name:* ${name}%0A` +
+                  `*Address:* ${address}%0A` +
+                  `*Mobile:* ${mobile}%0A` +
+                  `🗓️ *Order Time:* ${orderDateTime}%0A` +
+                  `⚠️ *Note:* Please upload audio & photo in HD, and PDF format only.`;
+
+  const phoneNumber = "917903212288";
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+
+  closeFrameForm();
+  document.getElementById("frameForm").reset();
 }
