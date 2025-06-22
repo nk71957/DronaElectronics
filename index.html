@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Drona Electronics</title>
   <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Nav Section -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <!-- <img src="image/logo.jpg" alt="Logo" class="logo" /> -->
+      <span class="logo">Drona Electronics</span>
+    </div>
+  </nav>
 <!-- Carousel Section -->
 <section class="carousel-section">
-    <h2>Explore the Drona Electronics</h2>
     <div class="carousel">
-      <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+      <!-- <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button> -->
       <div class="carousel-images">
         <img src="image/IMG1.jpg" class="carousel-slide active" alt="View 1">
         <img src="image/IMG2.jpg" class="carousel-slide" alt="View 2">
@@ -20,92 +27,402 @@
         <img src="image/IMG5.jpg" class="carousel-slide" alt="View 3">
         <img src="image/IMG6.jpg" class="carousel-slide" alt="View 3">
       </div>
-      <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+      <!-- <button class="carousel-btn next" onclick="moveSlide(1)">❯</button> -->
     </div>
   </section>  
   <!-- Image Gallery Section -->
   <section class="gallery-section">
-    <h2>Product Gallery</h2>
+    <h2>Chanting Box</h2>
     <div class="gallery-grid">
       <div class="gallery-item">
         <img src="image/IMG1.jpg" alt="Product 1" onclick="openLightbox(this)">
-        <p class="product-name">Lamps With Mantra Sound</p>
-        <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">🛒 Buy Now</button>
+       <!---- <p class="product-name">Lamps With Mantra Sound</p>
+        <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹249/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG2.jpg" alt="Product 2" onclick="openLightbox(this)">
-        <p class="product-name">Shiv Lamps With Mantra Sound</p>
-        <button class="buy-now-button" onclick="openBuyForm('Shiv Lamps With Mantra Sound')">🛒 Buy Now</button>
+        <!-- <p class="product-name">Shiv Lamps With Mantra Sound</p>
+        <button class="buy-now-button" onclick="openBuyForm('Shiv Lamps With Mantra Sound')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG3.jpg" alt="Product 3" onclick="openLightbox(this)">
-        <p class="product-name">Shiv Lamps With Mantra Sound</p>
-        <button class="buy-now-button" onclick="openBuyForm('Shiv Lamps With Mantra Sound')">🛒 Buy Now</button>
+        <!-- <p class="product-name">Shiv Lamps With Mantra Sound</p>
+        <button class="buy-now-button" onclick="openBuyForm('Shiv Lamps With Mantra Sound')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG4.jpg" alt="Product 4" onclick="openLightbox(this)">
-        <p class="product-name">Smart LED Bulb</p>
-        <button class="buy-now-button" onclick="openBuyForm('Smart LED Bulb')">🛒 Buy Now</button>
+        <!-- <p class="product-name">Smart LED Bulb</p>
+        <button class="buy-now-button" onclick="openBuyForm('Smart LED Bulb')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG5.jpg" alt="Product 5" onclick="openLightbox(this)">
-        <p class="product-name">Wireless Earbuds</p>
-        <button class="buy-now-button" onclick="openBuyForm('Wireless Earbuds')">🛒 Buy Now</button>
+        <!-- <p class="product-name">Wireless Earbuds</p>
+        <button class="buy-now-button" onclick="openBuyForm('Wireless Earbuds')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG6.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">USB Charging Station</p>
-        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button>
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG7.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">USB Charging Station</p>
-        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button>
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG8.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">USB Charging Station</p>
-        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button>
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG9.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">USB Charging Station</p>
-        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button>
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG10.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">USB Charging Station</p>
-        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button>
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG11.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">Night Lamps</p>
-        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button>
+        <!-- <p class="product-name">Night Lamps</p>
+        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG12.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">USB Charging Station</p>
-        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button>
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG13.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">Night Lamps</p>
-        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button>
+        <!-- <p class="product-name">Night Lamps</p>
+        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG14.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">Night Lamps</p>
-        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button>
+        <!-- <p class="product-name">Night Lamps</p>
+        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG15.jpg" alt="Product 6" onclick="openLightbox(this)">
-        <p class="product-name">Night Lamps</p>
-        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button>
+        <!-- <p class="product-name">Night Lamps</p>
+        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
       <div class="gallery-item">
         <img src="image/IMG1.jpg" alt="Product 16" onclick="openLightbox(this)">
-        <p class="product-name">Lamps With Mantra</p>
-        <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra')">🛒 Buy Now</button>
+        <!-- <p class="product-name">Lamps With Mantra</p>
+        <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Night Lamps Section-->
+  <section class="gallery-section">
+    <h2>Night Lamps</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="image/IMG1.jpg" alt="Product 1" onclick="openLightbox(this)">
+       <!---- <p class="product-name">Lamps With Mantra Sound</p>
+        <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹249/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG2.jpg" alt="Product 2" onclick="openLightbox(this)">
+        <!-- <p class="product-name">Shiv Lamps With Mantra Sound</p>
+        <button class="buy-now-button" onclick="openBuyForm('Shiv Lamps With Mantra Sound')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG3.jpg" alt="Product 3" onclick="openLightbox(this)">
+        <!-- <p class="product-name">Shiv Lamps With Mantra Sound</p>
+        <button class="buy-now-button" onclick="openBuyForm('Shiv Lamps With Mantra Sound')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG4.jpg" alt="Product 4" onclick="openLightbox(this)">
+        <!-- <p class="product-name">Smart LED Bulb</p>
+        <button class="buy-now-button" onclick="openBuyForm('Smart LED Bulb')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG5.jpg" alt="Product 5" onclick="openLightbox(this)">
+        <!-- <p class="product-name">Wireless Earbuds</p>
+        <button class="buy-now-button" onclick="openBuyForm('Wireless Earbuds')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG6.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG7.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG8.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG9.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG10.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG11.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">Night Lamps</p>
+        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG12.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">USB Charging Station</p>
+        <button class="buy-now-button" onclick="openBuyForm('USB Charging Station')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG13.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">Night Lamps</p>
+        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG14.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">Night Lamps</p>
+        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG15.jpg" alt="Product 6" onclick="openLightbox(this)">
+        <!-- <p class="product-name">Night Lamps</p>
+        <button class="buy-now-button" onclick="openBuyForm('Night Lamps')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="image/IMG1.jpg" alt="Product 16" onclick="openLightbox(this)">
+        <!-- <p class="product-name">Lamps With Mantra</p>
+        <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra')">🛒 Buy Now</button> -->
+        <div class="product-details">
+          <p class="product-name">Lamps With Mantra Sound</p>
+          <P class="product-price">Price = ₹59/Piece</P>
+          <p class="product-meta">Material: Ceramic</p>
+          <p class="product-meta">Size: 8/9/8</p>
+          <button class="buy-now-button" onclick="openBuyForm('Lamps With Mantra Sound')">Get Best Price</button>
+        </div>
       </div>
     </div>
   </section>
