@@ -716,3 +716,46 @@
   color: #333;
   cursor: pointer;
 }
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  overflow: hidden;
+}
+
+.slider-image {
+  display: none;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slider-image.active {
+  display: block;
+}
+
+/* Dot styling */
+.dot-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot.active-dot {
+  background-color: #0b53f0;
+}
+
+.under-line
+{
+  text-decoration: underline;
+  color: #008060;
+}

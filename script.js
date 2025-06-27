@@ -168,3 +168,37 @@ function submitBulkOrder(event) {
   closeBulkOrderForm();
   document.getElementById("bulkOrderForm").reset();
 }
+
+let startX = 0;
+
+function touchStart(e, element) {
+  startX = e.touches[0].clientX;
+}
+
+function touchMove(e, element) {
+  e.preventDefault();
+}
+
+function touchEnd(element) {
+  const endX = event.changedTouches[0].clientX;
+  const deltaX = endX - startX;
+
+  const images = element.querySelectorAll('.slider-image');
+  const dots = element.querySelectorAll('.dot');
+  let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+
+  if (Math.abs(deltaX) > 30) {
+    images[currentIndex].classList.remove('active');
+    dots[currentIndex].classList.remove('active-dot');
+
+    if (deltaX < 0) {
+      currentIndex = (currentIndex + 1) % images.length;
+    } else {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+    }
+
+    images[currentIndex].classList.add('active');
+    dots[currentIndex].classList.add('active-dot');
+  }
+}
+
