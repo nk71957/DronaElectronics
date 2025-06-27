@@ -9,29 +9,51 @@
 </head>
 <body>
   <!-- Nav Section -->
-  <nav class="navbar">
-    <div class="navbar-left">
-      <!-- <img src="image/logo.jpg" alt="Logo" class="logo" /> -->
-      <span class="logo">Drona Electronics</span>
-    </div>
-  </nav>
+<nav class="navbar">
+  <div class="navbar-left">
+    <span class="logo">Drona Electronics</span>
+  </div>
+
+  <div class="navbar-right">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#chantingbox">Chanting Box</a></li>
+      <li><a href="#nightlamps">Night Lamps</a></li>
+      <li><a href="#" onclick="openFrameForm(); event.preventDefault()">Customize Frame</a></li>
+      <li><a href="#" onclick="openBulkOrderForm(); event.preventDefault()">Bulk Order Enquiry</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Sidebar Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="closeMenu()">🏠 Home</a>
+  <a href="#about" onclick="closeMenu()">ℹ️ About</a>
+  <a href="#chantingbox" onclick="closeMenu()">🔊 Chanting Box</a>
+  <a href="#nightlamps" onclick="closeMenu()">💡 Night Lamps</a>
+  <a href="#" onclick="openFrameForm(); closeMenu(); event.preventDefault()">🎨 Customize Frame</a>
+  <a href="#" onclick="openBulkOrderForm(); closeMenu(); event.preventDefault()">📦 Bulk Order Enquiry</a>
+  <a href="#contact" onclick="closeMenu()">📞 Contact</a>
+</div>
+<!-- Optional overlay background -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
 <!-- Carousel Section -->
 <section class="carousel-section">
     <div class="carousel">
       <!-- <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button> -->
       <div class="carousel-images">
         <img src="image/CH1.JPG" class="carousel-slide active" alt="View 1">
-        <img src="image/IMG14.jpg" class="carousel-slide" alt="View 2">
-        <img src="image/IMG3.jpg" class="carousel-slide" alt="View 3">
-        <img src="image/IMG4.jpg" class="carousel-slide" alt="View 3">
-        <img src="image/IMG5.jpg" class="carousel-slide" alt="View 3">
-        <img src="image/IMG6.jpg" class="carousel-slide" alt="View 3">
+        <img src="image/IMG1.jpg" class="carousel-slide" alt="View 2">
+        <img src="image/IMG11.jpg" class="carousel-slide" alt="View 3">
       </div>
       <!-- <button class="carousel-btn next" onclick="moveSlide(1)">❯</button> -->
     </div>
   </section>  
   <!-- Image Gallery Section -->
-  <section class="gallery-section">
+  <section class="gallery-section" id="chantingbox">
     <h2 class="under-line">Chanting Box</h2>
     <div class="gallery-grid">
       <div class="gallery-item">
@@ -39,9 +61,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/CH1.JPG" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/CH1.JPG" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -62,9 +84,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -85,9 +107,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -108,9 +130,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -131,9 +153,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -154,9 +176,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -177,9 +199,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -200,9 +222,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -221,7 +243,7 @@
     </div>
   </section>
   <!-- Night Lamps Section-->
-  <section class="gallery-section">
+  <section class="gallery-section" id="nightlamps">
     <h2 class="under-line">Night Lamps</h2>
     <div class="gallery-grid">
       <div class="gallery-item">
@@ -229,9 +251,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/NL1.JPG" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG14.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -252,9 +274,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -275,9 +297,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -298,9 +320,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -321,9 +343,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -344,9 +366,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -367,9 +389,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -390,9 +412,9 @@
             ontouchstart="touchStart(event, this)" 
             ontouchmove="touchMove(event, this)" 
             ontouchend="touchEnd(this)">     
-          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active">
-          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image">
-          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image">
+          <img src="image/IMG1.jpg" alt="Product Image" class="slider-image active" onclick="openLightbox(this)">
+          <img src="image/IMG2.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
+          <img src="image/IMG3.jpg" alt="Product Image" class="slider-image" onclick="openLightbox(this)">
           <!-- Dot indicators -->
           <div class="dot-container">
             <span class="dot active-dot"></span>
@@ -506,24 +528,49 @@
   <button onclick="openBulkOrderForm()">📦 Bulk Order Enquiry</button>
 </section>
 
-  <!-- Features Section -->
-  <section class="features">
-    <h2>Why Choose ElectroX?</h2>
-    <div class="features-grid">
-      <div class="feature">
-        <h3>🔊 Superior Sound</h3>
-        <p>Experience high-fidelity audio with noise cancellation and deep bass.</p>
-      </div>
-      <div class="feature">
-        <h3>🕒 Long Battery</h3>
-        <p>Enjoy up to 20 hours of playback on a single charge.</p>
-      </div>
-      <div class="feature">
-        <h3>🎧 Comfortable Fit</h3>
-        <p>Soft ear cushions designed for all-day use without fatigue.</p>
-      </div>
+  <!-- Map Section -->
+<section class="map-section">
+  <h2>Our Location</h2>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.9774825462973!2d77.10087767407666!3d28.66039288281752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03549fc3869d%3A0x40f89a3dc747a7cc!2sKaushik%20Mart!5e0!3m2!1sen!2sin!4v1751040667586!5m2!1sen!2sin"
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+  <!-- About Us Section -->
+  <section class="about-us-section" id="about">
+  <div class="about-content">
+    <h2>About Us</h2>
+    <p>
+      <strong>Drona Electronics</strong> is a trusted manufacturer of high-quality electronic parts and consumer products such as night lamps, spiritual sound devices, and home utility electronics. With a focus on innovation, affordability, and performance, we are committed to delivering products that blend functionality with thoughtful design.
+    </p>
+    <p>
+      Every product at Drona Electronics is carefully crafted and tested to meet rigorous quality standards. Whether you're sourcing components or looking for ready-to-use solutions, we provide reliable and durable electronics tailored to modern needs.
+    </p>
+    <p>
+      Located in India, we proudly serve both retail and wholesale clients across the country. With a growing product range and customer-first approach, we aim to be your go-to partner for all your electronic manufacturing needs.
+    </p>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <div class="contact-details">
+      <h3>MEENA ENTERPRISES</h3>
+      <p>NW-80, Vishnu Garden, Khayla,</p>
+      <p>Raghuvir Nagar Road, Near Kaushik Mart,</p>
+      <p>NEW DELHI</p>
+      <p><strong>Mobile:</strong> <a href="tel:+918076744871">+91 80767 44871</a></p>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>

@@ -202,3 +202,19 @@ function touchEnd(element) {
   }
 }
 
+
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+    document.getElementById("menuOverlay").classList.toggle("show");
+    document.body.style.overflow = document.getElementById("mobileMenu").classList.contains("show") ? "hidden" : "auto";
+  }
+
+  function closeMenu() {
+    document.getElementById("mobileMenu").classList.remove("show");
+    document.getElementById("menuOverlay").classList.remove("show");
+    document.body.style.overflow = "auto";
+  }
+
+
+
+
