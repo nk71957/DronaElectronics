@@ -93,7 +93,7 @@
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
-  .gallery-grid {
+  /* .gallery-grid {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -106,7 +106,24 @@
     border-radius: 12px;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
+  } */
+
+  .gallery-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px; /* Set fixed height */
+  object-fit: contain; /* Ensures image covers the box without distortion */
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
   
   .gallery-grid img:hover {
     transform: scale(1.05);
